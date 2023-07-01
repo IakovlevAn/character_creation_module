@@ -1,7 +1,17 @@
 from random import randint
+from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Start the training process.
+
+    Matches the char_class with existing classes
+    and displays the damage inflicted on the enemy.
+
+    Args:
+        char_name: The name you gave the character.
+        char_class: The class you chose for your character.
+    """
     if char_class == 'warrior':
         return (f'{char_name} нанёс противнику урон, равный '
                 f'{5 + randint(3, 5)}')
@@ -15,6 +25,15 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Start the defending process.
+
+    Matches the char_class with existing classes
+    and displays the damage blocked by the character.
+
+    Args:
+        char_name: The name you gave the character.
+        char_class: The class you chose for your character.
+    """
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} ед. урона')
     if char_class == 'mage':
@@ -25,6 +44,15 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Trigger the use of a special skill.
+
+    Matches the char_class with existing classes
+    and displays special skill usage.
+
+    Args:
+        char_name: The name you gave the character.
+        char_class: The class you chose for your character.
+    """
     if char_class == 'warrior':
         return (f'{char_name} применил специальное умение '
                 f'«Выносливость {80 + 25}»')
@@ -36,6 +64,15 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Start training process.
+
+    Matches the char_class with existing classes
+    and starts training.
+
+    Args:
+        char_name: The name you gave the character.
+        char_class: The class you chose for your character.
+    """
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — великий мастер ближнего боя.')
     if char_class == 'mage':
@@ -60,6 +97,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Start process of choosing char_class."""
     approve_choice: str = ''
     char_class: str = ''
     while approve_choice != 'y':
@@ -81,7 +119,8 @@ def choice_char_class() -> str:
     return char_class
 
 
-def main() -> None:
+if __name__ == '__main__':
+    run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name: str = input('...назови себя: ')
