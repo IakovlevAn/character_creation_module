@@ -2,6 +2,53 @@ from random import randint
 from graphic_arts.start_game_banner import run_screensaver
 
 
+class Character:
+    def __init__(self, char_name) -> None:
+        self.char_name = char_name
+
+    def attack(self) -> str:
+        pass
+
+    def defence(self) -> str:
+        pass
+
+    def special(self) -> str:
+        pass
+
+
+class Warrior(Character):
+    def attack(self) -> str:
+        return super().attack()
+
+    def defence(self) -> str:
+        return super().defence()
+
+    def special(self) -> str:
+        return super().special()
+
+
+class Mage(Character):
+    def attack(self) -> str:
+        return super().attack()
+
+    def defence(self) -> str:
+        return super().defence()
+
+    def special(self) -> str:
+        return super().special()
+
+
+class Healer(Character):
+    def attack(self) -> str:
+        return super().attack()
+
+    def defence(self) -> str:
+        return super().defence()
+
+    def special(self) -> str:
+        return super().special()
+
+
 def attack(char_name: str, char_class: str) -> str:
     """Start the training process.
 
