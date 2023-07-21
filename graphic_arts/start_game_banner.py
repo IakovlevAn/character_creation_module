@@ -39,6 +39,7 @@ def animation(screen):
 
 def run_screensaver():
     Screen.wrapper(animation)
+    ResizeScreenError
 
 
 if __name__ == "__main__":
